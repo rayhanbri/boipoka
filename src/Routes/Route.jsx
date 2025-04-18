@@ -6,6 +6,7 @@ import {
 } from "react-router";
 import Root from '../Pages/Root/Root';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
+import Home from '../Pages/Home/Home';
   
 
 // router ta k export kore dhibho
@@ -15,6 +16,13 @@ import ErrorPage from '../Pages/ErrorPage/ErrorPage';
   {
     path: "/",
     Component:Root,
-    errorElement: <ErrorPage></ErrorPage>
+    errorElement: <ErrorPage></ErrorPage>,
+    children : [
+      {
+        index: true,
+        path:'/',
+        Component:Home
+      }
+    ]
   },
 ]);

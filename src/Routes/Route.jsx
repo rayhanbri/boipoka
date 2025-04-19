@@ -7,6 +7,8 @@ import {
 import Root from '../Pages/Root/Root';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Home from '../Pages/Home/Home';
+import About from '../Pages/About/About';
+import BookDetails from '../Pages/BookDetails/BookDetails';
   
 
 // router ta k export kore dhibho
@@ -23,6 +25,14 @@ import Home from '../Pages/Home/Home';
         loader:() => fetch('booksData.json'),
         path:'/',
         Component:Home
+      },
+      {
+        path:'/about',
+        Component:About
+      },
+      {
+        path:"/bookdetails/:id",
+        Component:BookDetails
       }
     ]
   },

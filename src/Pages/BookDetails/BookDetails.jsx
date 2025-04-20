@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router';
 import { addToStoredDB } from '../../Utility/AddtoDB';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { toast, ToastContainer } from 'react-toastify';
 
 const MySwal = withReactContent(Swal)
 
@@ -29,6 +30,9 @@ const BookDetails = () => {
       text: "You clicked the button!",
       icon: "success"
     });
+    
+    toast("Wow so easy!")
+
    addToStoredDB(id);
   };
 
@@ -40,6 +44,7 @@ const BookDetails = () => {
      <div className='text-center gap-5 m-5'>
      <button className="btn btn-warning"> Add to Wishlist</button>
      <button onClick={()=>handleMarkAsRed(id)} className="btn btn-error ml-5">Mark As Read</button>
+     <ToastContainer />
      </div>
      <div className='divider'></div>
     </div>

@@ -1,6 +1,11 @@
 
 import { useLoaderData, useParams } from 'react-router';
 import { addToStoredDB } from '../../Utility/AddtoDB';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
+
 
 const BookDetails = () => {
   const{ id} = useParams();
@@ -17,8 +22,13 @@ const BookDetails = () => {
   // ei console home e giye abar click korte hoi 
 
   // console.log(data)
-
+  
   const handleMarkAsRed = id => {
+    MySwal.fire({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success"
+    });
    addToStoredDB(id);
   };
 

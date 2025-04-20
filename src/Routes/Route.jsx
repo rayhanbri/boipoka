@@ -9,6 +9,7 @@ import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Home from '../Pages/Home/Home';
 import About from '../Pages/About/About';
 import BookDetails from '../Pages/BookDetails/BookDetails';
+import ReadList from '../Pages/ReadList/ReadList';
   
 
 // router ta k export kore dhibho
@@ -36,6 +37,10 @@ import BookDetails from '../Pages/BookDetails/BookDetails';
         // folder accesss korar jonno slash diye acces  korbo naile jamel kore 
         loader:() =>  fetch('/booksData.json'),
         Component:BookDetails
+      },
+      {
+        path:"/readlist",
+        Component:ReadList
       }
     ]
   },

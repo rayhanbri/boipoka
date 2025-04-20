@@ -22,7 +22,8 @@ import BookDetails from '../Pages/BookDetails/BookDetails';
     children : [
       {
         index: true,
-        loader:() => fetch('booksData.json'),
+        // folder access korar somoi slash diye access korbo 
+        loader:() => fetch('/booksData.json'),
         path:'/',
         Component:Home
       },
@@ -32,6 +33,8 @@ import BookDetails from '../Pages/BookDetails/BookDetails';
       },
       {
         path:"/bookdetails/:id",
+        // folder accesss korar jonno slash diye acces  korbo naile jamel kore 
+        loader:() =>  fetch('/booksData.json'),
         Component:BookDetails
       }
     ]

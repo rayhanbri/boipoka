@@ -40,6 +40,7 @@ import ReadList from '../Pages/ReadList/ReadList';
       },
       {
         path:"/readlist",
+        loader:() =>  fetch('/booksData.json'),
         Component:ReadList
       }
     ]

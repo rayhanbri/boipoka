@@ -8,6 +8,7 @@ import Book from '../Book/Book';
 
 const ReadList = () => {
   const [readList,setReadList] =useState([])
+  const [sort,setSort] = useState('');
   const data = useLoaderData();
   // console.log(data)
 
@@ -23,9 +24,31 @@ const ReadList = () => {
     
   },[])
   // console.log(readList)
+  const handleSort = type => {
+    setSort(type);
+    if(type === 'pages'){
+      // boro theke choto hole a.rating er jaigai b.rating  dhibho only rating 
+      const sortedByPage = [...readList].sort((a,b) => a.totalPages - b.totalPages);
+      setReadList(sortedByPage)
+      console.log(sortedByPage)
+    }
+
+    if(type === "rating"){
+      const  sortedByRating = [...readList].sort((a,b) => a.rating - b.rating)
+      setReadList(sortedByRating)
+    }
+    
+  }
 
   return (
     <div>
+      <details className="dropdown">
+  <summary className="btn m-1">sort by:{sort?sort:""}</summary>
+  <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+    <li><a onClick={()=>handleSort('pages')}>pages</a></li>
+    <li><a onClick={()=>handleSort('rating')}>rating</a></li>
+  </ul>
+</details>
       <Tabs>
         <TabList>
           <Tab>Read Book List</Tab>

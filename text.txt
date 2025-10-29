@@ -1,3 +1,18 @@
+What does the useState hook return?
+
+A state value and a function to update it
+
+When does useEffect run?
+
+After the render, depending on the dependency array
+
+What is the difference between props and state?
+Props are read-only and passed to components; state is managed within the component
+
+What does it mean to "lift state up" in React?
+
+To move state from child to parent to share between siblings
+
 
 
 module flow ....
@@ -11,4 +26,18 @@ module flow ....
 8.addToDb.js
 9.ReadList  React tab installed useeffetcht  in readlist 
 10.sorting in readlist is important
-11.exploe sweet alet and React-toastify
+11.exploe sweet alet and React-toastify (toast container central ekta jai ghai rakthe hoi)
+12.How to change favicon(icon from public folder)
+
+How to use helmet provider 
+1.npm i react-helmet-async --legacy-peer-deps
+
+2.wrap your router provider
+
+3.just helmet import and title
+
+Explore React Developer tool
+
+
+Explore it
+Google Map ;- https://web.programming-hero.com/web-11/video/web-11-48_5-2-google-map-api-integration

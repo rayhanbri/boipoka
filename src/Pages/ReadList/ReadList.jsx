@@ -22,7 +22,7 @@ const ReadList = () => {
     setReadList(myReadList)
     
     
-  },[])
+  },[data])
   // console.log(readList)
   const handleSort = type => {
     setSort(type);

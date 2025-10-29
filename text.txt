@@ -1,0 +1,14 @@
+
+
+module flow ....
+1.see the folder structure 
+2.create router on another folder
+3.error element
+4.How set error page on children route 
+5.LoadData with useEffect in Books.jsx also uesing suspense also usingLoader
+6.book details page
+7.Mark as red button
+8.addToDb.js
+9.ReadList  React tab installed useeffetcht  in readlist 
+10.sorting in readlist is important
+11.exploe sweet alet and React-toastify

@@ -1,4 +1,4 @@
-// import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense} from 'react';
 import Book from '../Book/Book';
 
 const Books = ({data}) => {
@@ -19,12 +19,14 @@ const Books = ({data}) => {
       {/* <Suspense>
         <Book booksPromise={booksPromise} ></Book>
       </Suspense> */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
+     <Suspense fallback={<span>...loading</span>}>
+       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
       {
         data.map(singleBook => <Book key={singleBook.bookId} singleBook={singleBook}></Book>)
       }
      
       </div>
+     </Suspense>
     </div>
   );
 };

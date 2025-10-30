@@ -16,7 +16,8 @@ const addToStoredDB = (id) =>{
   const storedBookData = getStoreBook();
 
   if(storedBookData.includes(id)){
-    alert ('bhai ei id already ache');
+       alert ('bhai ei id already ache')
+       return false
   }
   else{
     storedBookData.push(id);

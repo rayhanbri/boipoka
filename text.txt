@@ -1,17 +1,13 @@
-What does the useState hook return?
+**sobar aghe database and mark as red button
+**sorting also important
 
-A state value and a function to update it
 
-When does useEffect run?
-
-After the render, depending on the dependency array
-
-What is the difference between props and state?
-Props are read-only and passed to components; state is managed within the component
-
-What does it mean to "lift state up" in React?
-
-To move state from child to parent to share between siblings
+1.how open route in another folder . 
+2.how load data with useeffect  and suspense and loader
+3.How book details page working with dynamic routes
+4.destructure params and parseInt the useParams
+5.Read list shor (map and filter is important)
+6.how to short data
 
 
 

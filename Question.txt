@@ -1,0 +1,17 @@
+##What does the useState hook return?
+
+A state value and a function to update it
+
+###When does useEffect run?
+
+After the render, depending on the dependency array
+
+##What is the difference between props and state?
+
+Props are read-only and passed to components; state is managed within the component
+
+
+##What does it mean to "lift state up" in React?
+
+To move state from child to parent to share between siblings
+
